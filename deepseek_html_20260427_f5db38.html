@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Блокчейн для защиты данных | Образовательный проект</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #1e2a3a;
+            background: #f8fafc;
+        }
+
+        /* Шапка и навигация */
+        header {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            padding: 0 1rem;
+        }
+
+        nav a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 40px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: #334155;
+            color: white;
+        }
+
+        /* Основной контейнер */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Секции */
+        section {
+            background: white;
+            border-radius: 28px;
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            scroll-margin-top: 80px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #0f172a, #2d3748);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.2rem;
+            color: #0f172a;
+            border-left: 5px solid #3b82f6;
+            padding-left: 1rem;
+        }
+
+        h3 {
+            margin: 1.5rem 0 0.75rem 0;
+            color: #1e293b;
+        }
+
+        /* Интерактивные виджеты */
+        .widget {
+            background: #f1f5f9;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border: 1px solid #e2e8f0;
+        }
+
+        .widget label {
+            display: block;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+
+        .widget input, .widget textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin-top: 0.25rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 16px;
+            font-family: monospace;
+            font-size: 1rem;
+        }
+
+        button {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 0.6rem 1.4rem;
+            border-radius: 40px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: 0.2s;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background: #2563eb;
+            transform: scale(1.02);
+        }
+
+        .result {
+            background: #0f172a;
+            color: #bbf7d0;
+            padding: 0.75rem;
+            border-radius: 16px;
+            font-family: monospace;
+            margin-top: 1rem;
+            word-break: break-all;
+        }
+
+        .example-card {
+            background: #eef2ff;
+            padding: 1rem;
+            border-radius: 20px;
+            margin: 1rem 0;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+            gap: 1.5rem;
+        }
+
+        footer {
+            background: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 700px) {
+            .container { padding: 0 1rem; }
+            section { padding: 1.5rem; }
+            h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="#" data-section="home">Главная</a>
+        <a href="#" data-section="basics">Основы блокчейна</a>
+        <a href="#" data-section="security">Защита данных</a>
+        <a href="#" data-section="examples">Примеры</a>
+        <a href="#" data-section="interactive">Интерактив</a>
+        <a href="#" data-section="glossary">Глоссарий</a>
+    </nav>
+</header>
+
+<div class="container">
+    <!-- ГЛАВНАЯ -->
+    <section id="home">
+        <h1>🔗 Как использовать блокчейн для защиты данных</h1>
+        <p><strong>Индивидуальный проект</strong> по информатике<br>
+        Автор: Бабушкин С.Н., 10 класс | Руководитель: Чепкасова Е.В.</p>
+        <p>Технология блокчейн — это не только криптовалюты. Это надёжный способ обеспечить <strong>целостность, прозрачность и децентрализацию</strong> данных. На этом сайте вы узнаете основные принципы и проверите работу криптографического хэширования.</p>
+        <div style="background:#e6f0ff; border-radius: 24px; padding:1rem; margin-top:1rem">
+            🎯 <strong>Цель проекта:</strong> исследовать возможности блокчейна для защиты данных и создать образовательный ресурс.
+        </div>
+    </section>
+
+    <!-- ОСНОВЫ БЛОКЧЕЙНА -->
+    <section id="basics" style="display:none">
+        <h2>📦 Что такое блокчейн?</h2>
+        <p>Блокчейн (цепочка блоков) — распределённый реестр, где каждый блок содержит данные, хэш предыдущего блока и метку времени. Информация не может быть изменена задним числом без разрушения всей цепи.</p>
+        <ul>
+            <li><strong>Децентрализация</strong> – нет единого сервера, данные хранятся у тысяч узлов.</li>
+            <li><strong>Хэширование</strong> – любой блок привязан к предыдущему через криптографический хэш.</li>
+            <li><strong>Консенсус</strong> (PoW, PoS) – узлы договариваются о достоверности записей.</li>
+        </ul>
+        <p>Блокчейны бывают публичными (Bitcoin, Ethereum), приватными и консорциумными.</p>
+    </section>
+
+    <!-- ЗАЩИТА ДАННЫХ -->
+    <section id="security" style="display:none">
+        <h2>🛡️ Блокчейн как инструмент защиты</h2>
+        <div class="grid-2">
+            <div>
+                <h3>✅ Преимущества</h3>
+                <ul>
+                    <li>Неизменяемость записей</li>
+                    <li>Отсутствие единой точки отказа</li>
+                    <li>Прозрачность и аудируемость</li>
+                    <li>Защита с помощью криптографии</li>
+                </ul>
+            </div>
+            <div>
+                <h3>⚠️ Ограничения</h3>
+                <ul>
+                    <li>Проблема масштабируемости</li>
+                    <li>Конфиденциальность в публичных сетях</li>
+                    <li>Потеря приватного ключа = потеря доступа</li>
+                    <li>Высокое энергопотребление (PoW)</li>
+                </ul>
+            </div>
+        </div>
+        <p><strong>Ключевые механизмы:</strong> криптографические хэши, цифровые подписи, консенсусные алгоритмы.</p>
+    </section>
+
+    <!-- ПРИМЕРЫ ИСПОЛЬЗОВАНИЯ -->
+    <section id="examples" style="display:none">
+        <h2>🌍 Реальные примеры</h2>
+        <div class="example-card">
+            <strong>📄 Защита документов</strong> – сервисы вроде Proof of Existence регистрируют хэш документа в блокчейне, доказывая существование в определённый момент.
+        </div>
+        <div class="example-card">
+            <strong>🆔 Самостоятельная цифровая идентичность (SSI)</strong> – вы храните аттестаты/паспорт в кошельке и предоставляете только криптоподтверждённые заявления.
+        </div>
+        <div class="example-card">
+            <strong>📦 Цепочки поставок</strong> – Walmart и IBM Food Trust отслеживают происхождение продуктов.
+        </div>
+        <div class="example-card">
+            <strong>🏥 Медицинские записи</strong> – пациент даёт врачу доступ к зашифрованным данным с фиксацией каждого запроса.
+        </div>
+        <button id="randomExampleBtn">🎲 Случайный пример из жизни</button>
+        <div id="randomExampleOutput" class="result" style="background:#f1f5f9; color:#1e293b">Нажмите кнопку, чтобы увидеть пример.</div>
+    </section>
+
+    <!-- ИНТЕРАКТИВ -->
+    <section id="interactive" style="display:none">
+        <h2>🧪 Интерактивная демонстрация</h2>
+        <div class="widget">
+            <h3>🔐 Калькулятор хэша (SHA-256)</h3>
+            <label>Введите текст:</label>
+            <textarea id="hashInput" rows="2" placeholder="Например: Блокчейн защищает данные"></textarea>
+            <button id="computeHashBtn">Вычислить хэш</button>
+            <div id="hashResult" class="result">Хэш появится здесь</div>
+            <p class="small" style="margin-top:0.5rem; font-size:0.8rem">* SHA-256 — криптографическая хэш-функция, используется в Bitcoin.</p>
+        </div>
+
+        <div class="widget">
+            <h3>✅ Проверка целостности данных</h3>
+            <label>Исходный текст:</label>
+            <textarea id="integrityText" rows="2" placeholder="Введите оригинальный текст"></textarea>
+            <label>Ожидаемый хэш (SHA-256):</label>
+            <input type="text" id="expectedHash" placeholder="Вставьте сюда хэш, полученный слева">
+            <button id="verifyIntegrityBtn">Проверить целостность</button>
+            <div id="integrityResult" class="result">Результат проверки</div>
+            <p style="font-size:0.8rem">🔍 Если хэш совпадает — данные не были изменены. Если нет — данные повреждены или подделаны.</p>
+        </div>
+        <p>💡 Попробуйте поменять один символ в тексте и снова вычислить хэш — вы увидите «лавинный эффект» (полное изменение хэша).</p>
+    </section>
+
+    <!-- ГЛОССАРИЙ -->
+    <section id="glossary" style="display:none">
+        <h2>📖 Глоссарий</h2>
+        <ul>
+            <li><strong>Блокчейн</strong> — цепочка блоков, распределённый реестр.</li>
+            <li><strong>Хэш</strong> — результат работы хэш-функции (уникальный отпечаток).</li>
+            <li><strong>Приватный ключ</strong> — секретная криптографическая информация для подписи.</li>
+            <li><strong>Публичный ключ</strong> — открытый адрес для проверки подписи.</li>
+            <li><strong>Proof-of-Work (PoW)</strong> — консенсус через вычислительную работу (майнинг).</li>
+            <li><strong>Смарт-контракт</strong> — программа, выполняемая в блокчейне.</li>
+        </ul>
+        <h3>Полезные ресурсы</h3>
+        <ul>
+            <li><a href="https://bitcoin.org/bitcoin.pdf" target="_blank">Биткойн: пиринговая электронная денежная система (Сатоши Накамото)</a></li>
+            <li><a href="https://hyperledger-fabric.readthedocs.io/" target="_blank">Hyperledger Fabric документация</a></li>
+        </ul>
+    </section>
+</div>
+
+<footer>
+    <p>Проект по информатике «Блокчейн для защиты данных» | Арамиль, 2025</p>
+    <p>Интерактивные виджеты используют Web Crypto API (SHA-256)</p>
+</footer>
+
+<script>
+    // Плавная навигация между секциями
+    const sections = ['home', 'basics', 'security', 'examples', 'interactive', 'glossary'];
+    function showSection(id) {
+        sections.forEach(section => {
+            const el = document.getElementById(section);
+            if(el) el.style.display = 'none';
+        });
+        const active = document.getElementById(id);
+        if(active) active.style.display = 'block';
+        // обновить URL без перезагрузки (необязательно)
+        history.pushState(null, '', `#${id}`);
+    }
+
+    // Обработка кликов по навигации
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const sectionId = link.getAttribute('data-section');
+            if(sectionId && sections.includes(sectionId)) {
+                showSection(sectionId);
+            }
+        });
+    });
+
+    // Показать секцию на основе якоря при загрузке
+    const hash = window.location.hash.substring(1);
+    if(hash && sections.includes(hash)) {
+        showSection(hash);
+    } else {
+        showSection('home');
+    }
+
+    // ---- Хэширование через Web Crypto API (SHA-256) ----
+    async function sha256(message) {
+        const encoder = new TextEncoder();
+        const data = encoder.encode(message);
+        const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+        const hashArray = Array.from(new Uint8Array(hashBuffer));
+        const hashHex = hashArray.map(b => b.toString(16).padStart(2,'0')).join('');
+        return hashHex;
+    }
+
+    // Обработчик для калькулятора хэша
+    const computeBtn = document.getElementById('computeHashBtn');
+    const hashInput = document.getElementById('hashInput');
+    const hashResultDiv = document.getElementById('hashResult');
+
+    computeBtn.addEventListener('click', async () => {
+        const text = hashInput.value;
+        if(!text.trim()) {
+            hashResultDiv.textContent = '⚠️ Введите текст для хэширования.';
+            return;
+        }
+        hashResultDiv.textContent = '⏳ Вычисление...';
+        const hash = await sha256(text);
+        hashResultDiv.textContent = `SHA-256: ${hash}`;
+    });
+
+    // Проверка целостности
+    const verifyBtn = document.getElementById('verifyIntegrityBtn');
+    const integrityText = document.getElementById('integrityText');
+    const expectedHash = document.getElementById('expectedHash');
+    const integrityResult = document.getElementById('integrityResult');
+
+    verifyBtn.addEventListener('click', async () => {
+        const text = integrityText.value;
+        const expected = expectedHash.value.trim();
+        if(!text || !expected) {
+            integrityResult.textContent = '❌ Заполните оба поля: текст и ожидаемый хэш.';
+            return;
+        }
+        integrityResult.textContent = '⏳ Проверяем...';
+        const computed = await sha256(text);
+        if(computed === expected) {
+            integrityResult.innerHTML = '✅ Целостность подтверждена! Хэш совпадает. Данные не были изменены.';
+        } else {
+            integrityResult.innerHTML = `❌ Целостность нарушена! Хэш не совпадает.<br>Вычисленный хэш: ${computed}`;
+        }
+    });
+
+    // Случайный пример для раздела "Примеры"
+    const exampleList = [
+        "📌 Everledger использует блокчейн для отслеживания происхождения алмазов, снижая риск подделок.",
+        "📌 Эстония применяет блокчейн в системе электронного здравоохранения для защиты медицинских записей.",
+        "📌 Maersk и IBM TradeLens — цифровая логистика на блокчейне, обеспечивающая прозрачность контейнерных перевозок.",
+        "📌 В ОАЭ граждане могут использовать блокчейн для подтверждения дипломов без обращения в учебные заведения.",
+        "📌 Storj использует блокчейн для децентрализованного облачного хранения с шифрованием."
+    ];
+    const randomBtn = document.getElementById('randomExampleBtn');
+    const randomOutput = document.getElementById('randomExampleOutput');
+    if(randomBtn) {
+        randomBtn.addEventListener('click', () => {
+            const idx = Math.floor(Math.random() * exampleList.length);
+            randomOutput.innerHTML = exampleList[idx];
+        });
+    }
+</script>
+</body>
+</html>
